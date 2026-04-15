@@ -89,7 +89,7 @@ body{
 .sd-text p{font-size:14px;line-height:1.8;color:rgba(245,242,237,0.6);margin-bottom:32px}
 .sd-price-home{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:rgba(245,242,237,0.15);line-height:1;margin-bottom:24px}
 .sd-img{position:relative;overflow:hidden;background:#1a1714}
-.sd-img .img-cover{object-position:center top}
+.sd-img .img-cover{object-position:right top}
 
 /* ===== ABOUT ===== */
 .about-hero{display:grid;grid-template-columns:1fr 1fr;min-height:88vh}
@@ -107,8 +107,8 @@ body{
 .about-main p strong{color:var(--esp);font-weight:500}
 .about-main p:last-child{margin-bottom:36px}
 
-.about-img-break{width:100%;height:480px;position:relative;overflow:hidden;background:#3a3330}
-.about-img-break .img-cover{object-position:center 20%}
+.about-img-break{width:100%;height:560px;position:relative;overflow:hidden;background:#3a3330}
+.about-img-break .img-cover{object-position:center 45%}
 
 /* ===== WHAT I DO ===== */
 .wid-header{padding:100px 60px 70px;border-bottom:0.5px solid rgba(61,56,53,0.1);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
@@ -285,7 +285,7 @@ body{
 /* ===== CONTACT ===== */
 .contact-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:88vh}
 .contact-img{position:relative;overflow:hidden;background:var(--esp);min-height:500px}
-.contact-img .img-cover{object-position:center 20%}
+.contact-img .img-cover{object-position:center center}
 .contact-text{padding:100px 80px;display:flex;flex-direction:column;justify-content:center;background:var(--bone)}
 .contact-text h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,56px);font-weight:300;line-height:1.08;letter-spacing:-0.02em;color:var(--esp);margin-bottom:26px}
 .contact-text h1 em{font-style:italic}
@@ -446,7 +446,7 @@ body{
   .about-img .img-cover{object-position:center 15%}
   .about-img-break{height:320px}
   .contact-img{min-height:400px}
-  .contact-img .img-cover{object-position:center 15%}
+  .contact-img .img-cover{object-position:center center}
   .sd-img{min-height:300px}
   .split-img{min-height:280px}
 
