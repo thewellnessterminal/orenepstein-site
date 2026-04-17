@@ -94,10 +94,107 @@
         </div>
       </div>
     </div>
+
+    <section class="brf-section" id="booking-request">
+      <div class="brf-header">
+        <div>
+          <div class="sec-label">Booking request</div>
+          <h2>Speaking, media<br>&amp; <em>advisory inquiries.</em></h2>
+        </div>
+        <div class="brf-header-r">
+          <p>Oren takes a limited number of speaking, advisory, and media engagements each year. Fill out the form below and we will follow up within 48 hours.</p>
+        </div>
+      </div>
+
+      <div data-fs-success>
+        <p>Request received. We will follow up within 48 hours.</p>
+      </div>
+      <div data-fs-error></div>
+
+      <form id="booking-form" action="https://formspree.io/f/mqewqddg" method="POST">
+        <div class="brf-form">
+          <div class="brf-field">
+            <label class="brf-label" for="full-name">Full name <span>*</span></label>
+            <input class="brf-input" id="full-name" type="text" name="full_name" placeholder="Your full name" required data-fs-field>
+            <span data-fs-error="full_name"></span>
+          </div>
+          <div class="brf-field">
+            <label class="brf-label" for="organization">Organization or company</label>
+            <input class="brf-input" id="organization" type="text" name="organization" placeholder="Where you're from" data-fs-field>
+          </div>
+          <div class="brf-field">
+            <label class="brf-label" for="email">Email <span>*</span></label>
+            <input class="brf-input" id="email" type="email" name="email" placeholder="your@email.com" required data-fs-field>
+            <span data-fs-error="email"></span>
+          </div>
+          <div class="brf-field">
+            <label class="brf-label" for="phone">Phone number</label>
+            <input class="brf-input" id="phone" type="tel" name="phone" placeholder="+1 (000) 000-0000" data-fs-field>
+          </div>
+          <div class="brf-field">
+            <label class="brf-label" for="request-type">Type of request <span>*</span></label>
+            <div class="brf-select-wrap">
+              <select class="brf-select" id="request-type" name="request_type" required data-fs-field>
+                <option value="" disabled selected>Select one</option>
+                <option>Speaking</option>
+                <option>Workshop</option>
+                <option>Podcast</option>
+                <option>Advisory Inquiry</option>
+                <option>Media / Press</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="brf-field">
+            <label class="brf-label" for="format">In person or virtual?</label>
+            <div class="brf-select-wrap">
+              <select class="brf-select" id="format" name="format" data-fs-field>
+                <option value="" disabled selected>Select one</option>
+                <option>In person</option>
+                <option>Virtual</option>
+                <option>Either works</option>
+              </select>
+            </div>
+          </div>
+          <div class="brf-field">
+            <label class="brf-label" for="event-name">Event or show name</label>
+            <input class="brf-input" id="event-name" type="text" name="event_name" placeholder="Name of the event, podcast, or publication" data-fs-field>
+          </div>
+          <div class="brf-field">
+            <label class="brf-label" for="audience-size">Audience size</label>
+            <div class="brf-select-wrap">
+              <select class="brf-select" id="audience-size" name="audience_size" data-fs-field>
+                <option value="" disabled selected>Approximate range</option>
+                <option>Under 100</option>
+                <option>100 – 500</option>
+                <option>500 – 2,000</option>
+                <option>2,000 – 10,000</option>
+                <option>10,000+</option>
+              </select>
+            </div>
+          </div>
+          <div class="brf-field brf-field--full">
+            <label class="brf-label" for="timeframe">Proposed date or timeframe</label>
+            <input class="brf-input" id="timeframe" type="text" name="timeframe" placeholder="e.g. June 2026, flexible, TBD" data-fs-field>
+          </div>
+          <div class="brf-field brf-field--full">
+            <label class="brf-label" for="details">Tell us more</label>
+            <textarea class="brf-textarea" id="details" name="details" placeholder="Any context that would help us understand the request" data-fs-field></textarea>
+          </div>
+        </div>
+        <div class="brf-footer">
+          <span class="brf-note">Fields marked <span>*</span> are required. We respond within 48 hours.</span>
+          <button class="brf-submit" type="submit" data-fs-submit-btn>Submit request</button>
+        </div>
+      </form>
+    </section>
   </main>
 
   <footer class="footer">
-    <a href="/" class="footer-logo">Oren Epstein</a>
+    <div>
+      <a href="/" class="footer-logo">Oren Epstein</a>
+      <div class="footer-tagline">Brand &amp; Business Advisory</div>
+    </div>
     <ul class="footer-links">
       <li><a href="/about">About</a></li>
       <li><a href="/coaching">What I Do</a></li>
@@ -107,9 +204,23 @@
       <li><a href="/connect">Contact</a></li>
       <li><a href="https://thebetteradvisors.com" target="_blank" rel="noopener">The Better Advisors</a></li>
     </ul>
+    <div class="footer-right">
+      <div class="footer-email"><a href="mailto:hello@orenepstein.ca">hello@orenepstein.ca</a></div>
+      <div class="footer-socials">
+        <a class="footer-social" href="https://instagram.com/_oren" target="_blank" rel="noopener">Instagram</a>
+        <a class="footer-social" href="https://linkedin.com/in/orenepstein" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <a class="footer-speak" href="/connect#booking-request">Book to Speak</a>
+      <div class="footer-copy">&copy; 2026 Oren Epstein</div>
+    </div>
   </footer>
 
 </div>
 <script src="/js/main.js"></script>
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#booking-form', formId: 'mqewqddg' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
